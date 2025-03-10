@@ -1,0 +1,77 @@
+4 Develop a page and set the height:(in pixels and %) and width:(in pixels and %) on elements.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Height and Width Examples</title>
+<style>
+.pixel-box {
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+  border: 1px solid blue;
+  margin-bottom: 20px;
+}
+.percentage-box {
+  width: 50%;
+  height: 40%; 
+  background-color: lightgreen;
+  border: 1px solid green;
+  margin-bottom: 20px;
+}
+
+
+.parent-container {
+  width: 800px; 
+  height: 500px; 
+  background-color: #f0f0f0;
+  border: 1px solid gray;
+  margin-bottom: 20px;
+}
+
+.mixed-box {
+  width: 50%;
+  height: 100px; 
+  background-color: lightcoral;
+  border: 1px solid red;
+}
+
+
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0; 
+}
+
+.full-page-box{
+    height: 100%;
+    width: 100%;
+    background-color: lightyellow;
+    border: 1px solid yellow;
+}
+
+</style>
+</head>
+<body>
+
+<div class="pixel-box">
+  This box has a width of 300px and a height of 200px.
+</div>
+
+<div class="percentage-box">
+  This box has a width of 50% and a height of 40% of the body.
+</div>
+
+<div class="parent-container">
+  <div class="mixed-box">
+    This box has a width of 50% of the parent and a height of 100px.
+  </div>
+</div>
+
+<div class="full-page-box">
+    This box fills 100% of the page.
+</div>
+
+</body>
+</html>
+
