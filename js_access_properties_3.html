@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter</title>
+</head>
+<body>
+
+  <p>Count: <span id="counter">0</span></p>
+  <button id="countButton">Count</button>
+
+  <script>
+    let count = 0; // Initialize the counter
+
+    document.getElementById("countButton").addEventListener("click", function() {
+      count++; // Increment the counter
+      document.getElementById("counter").textContent = count; // Update the displayed count
+    });
+  </script>
+
+</body>
+</html>

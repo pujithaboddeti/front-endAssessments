@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation, Pagination & Positions</title>
+    <style>
+        /* CSS Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animated-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: blue;
+            animation-name: fadeIn;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pagination li {
+            margin: 5px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background: lightgray;
+            color: black;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .pagination a:hover {
+            background: darkgray;
+        }
+
+        /* Pagination Without Spaces */
+        .pagination-no-space li {
+            margin: 0;
+        }
+
+        /* Positioning Elements */
+        .static { position: static; background: lightblue; padding: 10px; }
+        .relative { position: relative; left: 20px; background: lightcoral; padding: 10px; }
+        .fixed { position: fixed; top: 10px; right: 10px; background: lightgreen; padding: 10px; }
+        .absolute { position: absolute; top: 50px; left: 50px; background: lightpink; padding: 10px; }
+        .sticky { position: sticky; top: 0; background: lightsalmon; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2 class="animated-text">Welcome to Animation, Pagination & Positions</h2>
+    
+    <h3>Pagination with Spaces</h3>
+    <ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+
+    <h3>Pagination Without Spaces</h3>
+    <ul class="pagination pagination-no-space">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+
+    <h3>Positioning Examples</h3>
+    <div class="static">Static Position</div>
+    <div class="relative">Relative Position</div>
+    <div class="fixed">Fixed Position</div>
+    <div class="absolute">Absolute Position</div>
+    <div class="sticky">Sticky Position (Scroll down to see effect)</div>
+</body>
+</html>

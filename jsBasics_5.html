@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable Hoisting Example</title>
+</head>
+<body>
+
+<script>
+  document.write("Before Initialization: " + myVar + "<br>"); // Outputs undefined because of hoisting
+
+  var myVar = 5;
+
+  document.write("After Initialization: " + myVar); // Outputs 5 after initialization
+</script>
+
+</body>
+</html>

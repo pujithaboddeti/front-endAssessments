@@ -1,0 +1,573 @@
+1. A page which specify a black border for table and if hover on it, page should change 
+it's colour.
+
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table Hover Effect</title>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+</style>
+</head>
+<body>
+
+<h2>Table with Hover Effect</h2>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Points</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Smith</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Jones</td>
+    <td>15</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+CSS:
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+
+2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use 
+different types of display for an element (display: none, inline, block, contents, list-item)
+
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visibility and Display</title>
+<style>
+  .visibility-hidden {
+    visibility: hidden;
+    background-color: lightblue;
+  }
+
+  .visibility-visible {
+    visibility: visible;
+    background-color: lightgreen;
+  }
+
+  .visibility-collapse {
+    visibility: collapse;
+    background-color: lightcoral;
+  }
+
+  .display-none {
+    display: none;
+    background-color: yellow;
+  }
+
+  .display-inline {
+    display: inline;
+    background-color: orange;
+  }
+
+  .display-block {
+    display: block;
+    background-color: pink;
+  }
+
+  .display-contents {
+    display: contents;
+    background-color: lightgray; /* May not show background, depends on parent*/
+  }
+
+  .display-list-item {
+    display: list-item;
+    background-color: lightsalmon;
+  }
+
+  .container {
+    border: 1px solid black;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <h2>Visibility</h2>
+
+  <div class="container">
+    <p class="visibility-hidden">This element has visibility: hidden.</p>
+    <p class="visibility-visible">This element has visibility: visible.</p>
+    <p class="visibility-collapse">This element has visibility: collapse. (Only works on table rows/columns)</p>
+  </div>
+
+  <h2>Display</h2>
+
+  <div class="container">
+    <p class="display-none">This element has display: none.</p>
+    <span class="display-inline">This element has display: inline.</span>
+    <span class="display-inline">Another inline element.</span>
+    <p class="display-block">This element has display: block.</p>
+    <p class="display-block">Another block element.</p>
+
+    <div class="display-contents">
+      <p>This paragraph is inside a display: contents div.</p>
+      <span>This span is also inside.</span>
+    </div>
+
+    <ul class="container">
+      <li class="display-list-item">This list item has display: list-item.</li>
+      <li>Normal list item.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
+CSS:
+
+.visibility-hidden {
+  visibility: hidden;
+  background-color: lightblue;
+}
+
+.visibility-visible {
+  visibility: visible;
+  background-color: lightgreen;
+}
+
+.visibility-collapse {
+  visibility: collapse;
+  background-color: lightcoral;
+}
+
+.display-none {
+  display: none;
+  background-color: yellow;
+}
+
+.display-inline {
+  display: inline;
+  background-color: orange;
+}
+
+.display-block {
+  display: block;
+  background-color: pink;
+}
+
+.display-contents {
+  display: contents;
+  background-color: lightgray;
+}
+
+.display-list-item {
+  display: list-item;
+  background-color: lightsalmon;
+}
+
+.container {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+3. A long page which should have two links "click to go to bottom of page" and "click to 
+go to top of page" . Also set their scroll-behavior to scroll smoothly.
+
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smooth Scroll to Top/Bottom</title>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    height: 2000px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #top-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  #bottom-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  #bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+
+  <a href="#bottom" id="bottom-link">Click to go to bottom of page</a>
+  <a href="#top" id="top-link">Click to go to top of page</a>
+
+  <div id="top">
+    <h1>Top of the Page</h1>
+    <p>Scroll down to see the bottom link.</p>
+  </div>
+
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+  <p> ... (More content here) ... </p>
+
+  <div id="bottom">
+      <h1>Bottom of the Page</h1>
+      <p>Scroll up to see the top link.</p>
+  </div>
+
+</body>
+</html>
+
+CSS:
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 2000px;
+  margin: 0;
+  padding: 20px;
+}
+
+#top-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#bottom-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+4. Add padding and margin with different size and understand the difference between 
+them.
+
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Padding and Margin</title>
+<style>
+  .box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 100px; /* Vertically center text */
+  }
+
+  .padding-box {
+    padding: 20px; /* Padding on all sides */
+    background-color: lightblue;
+  }
+
+  .margin-box {
+    margin: 30px; /* Margin on all sides */
+    background-color: lightgreen;
+  }
+
+  .mixed-box {
+    padding: 10px 20px; /* top/bottom: 10px, left/right: 20px */
+    margin: 15px 5px; /* top/bottom: 15px, left/right: 5px */
+    background-color: lightcoral;
+  }
+
+  .individual-box {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    background-color: lightyellow;
+  }
+
+  .container {
+    display: flex; /* Display boxes side by side */
+    flex-wrap: wrap; /* Wrap boxes onto new lines if needed */
+    gap: 20px; /* Add some space between the boxes */
+  }
+</style>
+</head>
+<body>
+
+  <h1>Padding vs. Margin</h1>
+
+  <div class="container">
+    <div class="box padding-box">Padding Box</div>
+    <div class="box margin-box">Margin Box</div>
+    <div class="box mixed-box">Mixed Padding/Margin</div>
+    <div class="box individual-box">Individual Padding/Margin</div>
+  </div>
+
+  <p><strong>Padding:</strong> Creates space <em>inside</em> an element, between the element's content and its border. It affects the element's background.</p>
+  <p><strong>Margin:</strong> Creates space <em>outside</em> an element, between the element's border and other elements. It does not affect the element's background.</p>
+
+</body>
+</html>
+
+CSS:
+.box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 100px;
+}
+
+.padding-box {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.margin-box {
+  margin: 30px;
+  background-color: lightgreen;
+}
+
+.mixed-box {
+  padding: 10px 20px;
+  margin: 15px 5px;
+  background-color: lightcoral;
+}
+
+.individual-box {
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  background-color: lightyellow;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+5. A page with multiple background images for an webpage or element and define their 
+adjustable sizes.
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiple Background Images</title>
+<style>
+  body {
+    background-image:
+      url('image1.jpg'), /* Replace with your image paths */
+      url('image2.jpg'),
+      url('image3.jpg');
+
+    background-repeat: no-repeat, no-repeat, repeat; /* Define repeat for each image */
+
+    background-position: center, top right, bottom left; /* Define position for each image */
+
+    background-size: 50%, 200px, auto; /* Define size for each image */
+
+    background-attachment: fixed, scroll, local; /* define attachment for each image */
+
+    height: 1500px; /* Make the page scrollable */
+
+  }
+
+  .element {
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 50px auto;
+    background-image:
+      url('image4.jpg'),
+      url('image5.png');
+    background-repeat: no-repeat, repeat;
+    background-position: center, bottom right;
+    background-size: cover, 100px; /* 'cover' and specific pixel sizes */
+    background-attachment: scroll, local;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Multiple Background Images</h1>
+
+  <p>This page has multiple background images applied to the body.</p>
+
+  <div class="element">
+    <p>This element also has multiple background images.</p>
+  </div>
+
+  <p>Scroll down to see the effects of background-attachment.</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+
+</body>
+</html>
+CSS:
+body {
+  background-image:
+    url('image1.jpg'),
+    url('image2.jpg'),
+    url('image3.jpg');
+
+  background-repeat: no-repeat, no-repeat, repeat;
+
+  background-position: center, top right, bottom left;
+
+  background-size: 50%, 200px, auto;
+
+  background-attachment: fixed, scroll, local;
+
+  height: 1500px;
+}
+
+.element {
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  margin: 50px auto;
+  background-image:
+    url('image4.jpg'),
+    url('image5.png');
+  background-repeat: no-repeat, repeat;
+  background-position: center, bottom right;
+  background-size: cover, 100px;
+  background-attachment: scroll, local;
+}

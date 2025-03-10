@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <script>
+class Counter {
+    constructor(initialValue = 0) {
+      this._value = initialValue; // Private attribute
+    }
+  
+    get value() {
+      return this._value;
+    }
+  
+    set value(newValue) {
+      if (typeof newValue === 'number') {
+        this._value = newValue;
+      } else {
+        console.error("Error: Value must be a number.");
+      }
+    }
+  
+    increment(amount = 1) {
+      if (typeof amount === 'number') {
+        this._value += amount;
+      } else {
+        console.error("Error: Increment amount must be a number.");
+      }
+    }
+  
+    decrement(amount = 1) {
+      if (typeof amount === 'number') {
+        this._value -= amount;
+      } else {
+        console.error("Error: Decrement amount must be a number.");
+      }
+    }
+  }
+  
+  // Example usage:
+  const myCounter = new Counter(10);
+  console.log("Initial value:", myCounter.value);
+  
+  myCounter.increment();
+  console.log("After increment:", myCounter.value);
+  
+  myCounter.increment(5);
+  console.log("After increment by 5:", myCounter.value);
+  
+  myCounter.decrement(3);
+  console.log("After decrement by 3:", myCounter.value);
+  
+  myCounter.value = 25;
+  console.log("After setting to 25:", myCounter.value);
+  
+  myCounter.value = "abc";
+  console.log("After attempting to set to 'abc':", myCounter.value);
+  
+  myCounter.increment("abc");
+  console.log("After attempting to increment by 'abc':", myCounter.value);
+  
+  myCounter.decrement("abc");
+  console.log("After attempting to decrement by 'abc':", myCounter.value);
+</script>
+</body>
+  </html>

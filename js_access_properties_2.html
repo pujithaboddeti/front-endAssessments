@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <script>
+      
+function greet(greeting, punctuation) {
+    console.log(`${greeting}, ${this.name}${punctuation}`);
+  }
+  
+  const person = {
+    name: "peeps",
+  };
+  
+  // Using call()
+  greet.call(person, "Hello", "!"); // Output: Hello, Alice!
+  
+  // Using apply()
+  greet.apply(person, ["Hi", "?"]); // Output: Hi, Alice?
+  
+  // Another example
+  function sum(a, b, c) {
+    return a + b + c;
+  }
+
+  
+  const numbers = [1, 2, 3];
+  
+  const resultCall = sum.call(null, numbers[0], numbers[1], numbers[2]); //Output: 6
+  const resultApply = sum.apply(null, numbers); //Output: 6
+  
+  console.log(resultCall);
+  console.log(resultApply);
+ 
+    </script>
+  </body>
+</html>

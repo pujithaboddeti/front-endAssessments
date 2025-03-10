@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter text:</label>
+    <input type="text" id="mi">
+    <button id="b1">Submit</button>
+    <p id="so"></p>
+    <script>
+        document.getElementById("b1").addEventListener("click", function() {
+            var c = document.getElementById("mi").value;
+            if (c.trim() === "") {
+                document.getElementById("so").innerText = "This field cannot be empty";
+            }
+            else{
+                document.getElementById("so").innerText="";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!--Develop a web page using target attribute.-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Target Attribute Example</title>
+</head>
+<body>
+
+<h1>Target Attribute Examples</h1>
+
+<p>Click on the links below to see how the target attribute works.</p>
+
+<p>
+  <a href="https://www.youtube.com/" target="_blank">Open in New Tab/Window (_blank)</a>
+</p>
+
+<p>
+  <a href="https://www.youtube.com/" target="_self">Open in Same Tab/Window (_self)</a>
+  (This is the default behavior)
+</p>
+
+<p>
+  <a href="https://www.youtube.com/" target="_parent">Open in Parent Frame (_parent)</a>
+  (This example won't show _parent effect unless inside an iframe)
+</p>
+
+<p>
+  <a href="https://www.youtube.com/" target="_top">Open in Topmost Frame (_top)</a>
+  (This example won't show _top effect unless inside an iframe)
+</p>
+
+<p>
+  <iframe src="iframe_content.html" name="myFrame" width="400" height="200"></iframe>
+</p>
+
+<p>
+  <a href="https://www.example.com" target="myFrame">Open in Named Frame (myFrame)</a>
+</p>
+
+</body>
+</html>

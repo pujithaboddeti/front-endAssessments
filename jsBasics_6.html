@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strict Mode Example</title>
+</head>
+<body>
+
+<script>
+  "use strict"; // Enable strict mode
+
+  // Trying to use an undeclared variable
+  myVar = 5; // This will throw an error because 'myVar' is not declared
+
+  document.write("The value of myVar is: " + myVar); // This won't be reached
+</script>
+<script>
+    "use strict";
+
+let myVar = 5; // Properly declare the variable using 'let'
+
+document.write("The value of myVar is: " + myVar); // This will work correctly
+
+</script>
+</body>
+</html>

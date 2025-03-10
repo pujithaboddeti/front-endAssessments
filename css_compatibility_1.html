@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Table Layout</title>
+  <style>
+    table.fixed-layout {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    table.fixed-layout th, table.fixed-layout td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Table with Fixed Layout</h2>
+<table class="fixed-layout">
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>This is a longer text that might get cut off.</td>
+      <td>Short</td>
+      <td>Another long content here just for demo.</td>
+    </tr>
+    <tr>
+      <td>Row 2, Col 1</td>
+      <td>Row 2, Col 2</td>
+      <td>Row 2, Col 3</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

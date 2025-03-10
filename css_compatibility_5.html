@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Page</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .video-box video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .text-box {
+      grid-column: span 2; /* Full width */
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+
+    /* Media Query: Adjust grid for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+      }
+
+      .text-box {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Page Example</h1>
+    <p>Viewport + Grid + Media Queries + Image + Video</p>
+  </header>
+
+  <div class="container">
+    <div class="image-box">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Sample Image">
+    </div>
+    <div class="video-box">
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="text-box">
+      <p>This layout is fully responsive. The grid adjusts for different screen sizes using media queries. Images and videos scale automatically to fit the screen.</p>
+    </div>
+  </div>
+
+</body>
+</html>

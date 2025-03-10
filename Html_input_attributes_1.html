@@ -1,0 +1,46 @@
+<!--Design the web page using all the below input attributes
+type =text, password, submit, reset, radio, checkbox, button,-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Form</title>
+</head>
+<body>
+
+  <h1>Simple Form</h1>
+
+  <form>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <fieldset>
+      <legend>Gender:</legend>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+    </fieldset><br><br>
+
+    <fieldset>
+      <legend>Interests:</legend>
+      <input type="checkbox" id="sports" name="interests" value="sports">
+      <label for="sports">Sports</label><br>
+      <input type="checkbox" id="music" name="interests" value="music">
+      <label for="music">Music</label><br>
+      <input type="checkbox" id="reading" name="interests" value="reading">
+      <label for="reading">Reading</label>
+    </fieldset><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button">Click Me</button>
+
+  </form>
+
+</body>
+</html>
