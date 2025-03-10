@@ -1,0 +1,51 @@
+
+
+3 Create a different page with the width, style and color of the 4 border-style(set different borders on each side with different patterns).
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Different Borders</title>
+<style>
+.border-box {
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.border-box.top {
+  border-top-width: 5px;
+  border-top-style: dotted;
+  border-top-color: red;
+}
+
+.border-box.right {
+  border-right-width: 10px;
+  border-right-style: dashed;
+  border-right-color: blue;
+}
+
+.border-box.bottom {
+  border-bottom-width: 3px;
+  border-bottom-style: double;
+  border-bottom-color: green;
+}
+
+.border-box.left {
+  border-left-width: 8px;
+  border-left-style: groove;
+  border-left-color: purple;
+}
+</style>
+</head>
+<body>
+
+<div class="border-box top right bottom left">
+  <p>This box has different borders on each side.</p>
+</div>
+
+</body>
+</html>
+
