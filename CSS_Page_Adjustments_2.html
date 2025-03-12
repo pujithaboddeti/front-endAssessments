@@ -1,0 +1,89 @@
+<!-- 2. Apply different visibility by an element (visibility: hidden, visible, collapse) and use 
+different types of display for an element (display: none, inline, block, contents, list-item)
+
+HTML: -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visibility and Display</title>
+<style>
+  .visibility-hidden {
+    visibility: hidden;
+    background-color: lightblue;
+  }
+
+  .visibility-visible {
+    visibility: visible;
+    background-color: lightgreen;
+  }
+
+  .visibility-collapse {
+    visibility: collapse;
+    background-color: lightcoral;
+  }
+
+  .display-none {
+    display: none;
+    background-color: yellow;
+  }
+
+  .display-inline {
+    display: inline;
+    background-color: orange;
+  }
+
+  .display-block {
+    display: block;
+    background-color: pink;
+  }
+
+  .display-contents {
+    display: contents;
+    background-color: lightgray; /* May not show background, depends on parent*/
+  }
+
+  .display-list-item {
+    display: list-item;
+    background-color: lightsalmon;
+  }
+
+  .container {
+    border: 1px solid black;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <h2>Visibility</h2>
+
+  <div class="container">
+    <p class="visibility-hidden">This element has visibility: hidden.</p>
+    <p class="visibility-visible">This element has visibility: visible.</p>
+    <p class="visibility-collapse">This element has visibility: collapse. (Only works on table rows/columns)</p>
+  </div>
+
+  <h2>Display</h2>
+
+  <div class="container">
+    <p class="display-none">This element has display: none.</p>
+    <span class="display-inline">This element has display: inline.</span>
+    <span class="display-inline">Another inline element.</span>
+    <p class="display-block">This element has display: block.</p>
+    <p class="display-block">Another block element.</p>
+
+    <div class="display-contents">
+      <p>This paragraph is inside a display: contents div.</p>
+      <span>This span is also inside.</span>
+    </div>
+
+    <ul class="container">
+      <li class="display-list-item">This list item has display: list-item.</li>
+      <li>Normal list item.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
+

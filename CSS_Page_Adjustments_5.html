@@ -1,0 +1,67 @@
+5. A page with multiple background images for an webpage or element and define their 
+adjustable sizes.
+HTML:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiple Background Images</title>
+<style>
+  body {
+    background-image:
+      url('https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg?t=st=1741759598~exp=1741763198~hmac=53a55256b75223927c6a4dc009b8eaa27b6b345a3c5149dbe3067e05ada08d98&w=1380'), 
+      url('https://img.freepik.com/free-photo/blue-abstract-gradient-wave-wallpaper_53876-108364.jpg?t=st=1741759495~exp=1741763095~hmac=da92ae0f55f98f88477d00c4cecf4b83eacee634c1c1c866158b89ca2192e553&w=1800'),
+      url('https://img.freepik.com/premium-photo/cat-wearing-vr-headset-with-augmented-reality-entertainment_1023984-23683.jpg?w=1380');
+
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: center, top right, bottom left; 
+    background-size: 50%, 200px, auto; 
+    background-attachment: fixed, scroll, local; 
+    height: 1500px; 
+
+  }
+
+  .element {
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 50px auto;
+    background-image:
+      url('https://img.freepik.com/free-photo/beautiful-view-divi-divi-tree-coastline-tropical-aruba-beach_181624-46940.jpg?t=st=1741759830~exp=1741763430~hmac=50cce4e1d06079dd4e39f0421dc12621aebe798d9d575f8894fb9416145a594e&w=1380'),
+      url('https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg?t=st=1741759904~exp=1741763504~hmac=1ea03c22abc38b54916d58cc74f151623d39bd6ef3ed79373be524d1bee3c23e&w=1380');
+    background-repeat: no-repeat, repeat;
+    background-position: center, bottom right;
+    background-size: cover, 100px; /* 'cover' and specific pixel sizes */
+    background-attachment: scroll, local;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Multiple Background Images</h1>
+
+  <p>This page has multiple background images applied to the body.</p>
+
+  <div class="element">
+    <p>This element also has multiple background images.</p>
+  </div>
+
+  <p>Scroll down to see the effects of background-attachment.</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+  <p>More content here...</p>
+
+</body>
+</html>
